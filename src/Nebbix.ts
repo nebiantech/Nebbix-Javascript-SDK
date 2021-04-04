@@ -1,5 +1,5 @@
 const axios = require("axios")
-const BASE_URL = "http://localhost:8000/userApi"
+const BASE_URL = "https://core.nebbix.com/userApi"
 
 export class Nebbix {
     private userAccessToken = "";
