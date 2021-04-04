@@ -1,1 +1,1 @@
-require("./Nebbix")
+export * from "./Nebbix";
