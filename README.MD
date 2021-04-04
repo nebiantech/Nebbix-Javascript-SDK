@@ -205,3 +205,79 @@ nebbix.initializeTransactions({
     });
 
 ```
+### 10
+### sendBtc
+
+```
+    nebbix.sendBtc({
+        "address": "tb1qpq7ypa334wj07f92x6avv0zt7m2tjawgh5wk8f",
+        "wallet_id": "1",
+        "amount": "0.0001",
+        "set_fee": "0.00001000",
+        "memo": "Any text here (optional)"
+    }).then(e => console.log(e.data)).catch(e => {
+        console.log(e)
+    });
+```
+
+// Example response
+
+```
+{
+    "success": true,
+    "data": "bb5bc545a7cd8ea4e487c6833dbc75ef80a9c67b04f09f3b8544e8cc190f5eb0",
+    "message": "Btc sent successfully.",
+    "ref": "8bVE65teUO29fmZ"
+}
+```
+
+### 11
+### sendLtc
+
+```
+    nebbix.sendLtc({
+        "address": "tb1qpq7ypa334wj07f92x6avv0zt7m2tjawgh5wk8f",
+        "wallet_id": "1",
+        "amount": "0.0001",
+        "set_fee": "0.00001000",
+        "memo": "Any text here (optional)"
+    }).then(e => console.log(e.data)).catch(e => {
+        console.log(e)
+    });
+```
+
+// Example response
+
+```
+{
+    "success": true,
+    "data": "bb5bc545a7cd8ea4e487c6833dbc75ef80a9c67b04f09f3b8544e8cc190f5eb0",
+    "message": "Ltc sent successfully.",
+    "ref": "8bVE65teUO29fmZ"
+}
+```
+### 12
+### sendDoge
+
+```
+    nebbix.sendDoge({
+        "address": "tb1qpq7ypa334wj07f92x6avv0zt7m2tjawgh5wk8f",
+        "wallet_id": "1",
+        "amount": "0.0001",
+        "set_fee": "0.00001000",
+        "memo": "Any text here (optional)"
+    }).then(e => console.log(e.data)).catch(e => {
+        console.log(e)
+    });
+```
+
+// Example response
+
+```
+{
+    "success": true,
+    "data": "bb5bc545a7cd8ea4e487c6833dbc75ef80a9c67b04f09f3b8544e8cc190f5eb0",
+    "message": "Doge sent successfully.",
+    "ref": "8bVE65teUO29fmZ"
+}
+```
