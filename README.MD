@@ -13,6 +13,39 @@ nebbix.initializeTransactions({
 });
 
 ```
+// Example response
+
+```
+{
+    "success": true,
+    "data": {
+        "transaction": {
+            "title": "API transaction",
+            "memo": "Memo",
+            "amount": "0.00001000",
+            "status": "pending",
+            "phone": "Phone",
+            "address": "tb1qla08peppmcpvkcj2a0vfearrvvwqys25mzj2kt",
+            "ref": "CglZV51yxBuvXGd",
+            "custom_data": "{\"custom_keys\":\"custom_value\"}",
+            "created_by_type": "Client Api",
+            "type": "btc",
+            "sub_type": "api",
+            "updated_at": "2021-04-04T16:34:52.000000Z",
+            "created_at": "2021-04-04T16:34:46.000000Z",
+            "id": 102,
+            "dollar_value": 0.5796405000000001
+        },
+        "address": "tb1qla08peppmcpvkcj2a0vfearrvvwqys25mzj2kt",
+        "reference_code": "CglZV51yxBuvXGd",
+        "expiration_time": "15m",
+        "qr_code": "https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=tb1qla08peppmcpvkcj2a0vfearrvvwqys25mzj2kt"
+    },
+    "message": "API transaction created successfully.",
+    "ref": "CglZV51yxBuvXGd"
+}
+
+```
 
 ### 2 
 ### Query Payment
