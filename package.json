@@ -1,0 +1,23 @@
+{
+  "name": "nebbix-js-sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.ts",
+    "build": "tsc",
+    "watch": "npm run build && tsc-watch ./src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\" --onFailure \"echo Error while compiling\" --compiler typescript/bin/tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "axios": "^0.21.1",
+    "source-map-loader": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37"
+  }
+}
