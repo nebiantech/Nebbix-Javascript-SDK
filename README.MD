@@ -1,5 +1,5 @@
 ### 1 
-### Initialize a payment;
+### Initialize a payment
 
 ```
 nebbix.initializeTransactions({
@@ -56,7 +56,7 @@ nebbix.initializeTransactions({
 
 
 ### 3
-###    Create Btc Wallet`
+###    Create Btc Wallet
 
 
 ```
