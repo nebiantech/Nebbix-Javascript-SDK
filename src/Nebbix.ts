@@ -17,6 +17,20 @@ export class Nebbix {
     }
 
     /**
+     * getCoinsWithWallet
+     */
+    public async getCoinsWithWallet() {
+        return this.sendRequest("/coins", {}, "GET");
+    }
+
+    /**
+     * getWalletBalance
+     */
+    public async getWalletBalance(id) {
+        return this.sendRequest(`/balance/${id}`, {}, "GET");
+    }
+
+    /**
      * paymentQuery
      * GET request to query transaction;
     */
