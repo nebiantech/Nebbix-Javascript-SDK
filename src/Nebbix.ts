@@ -1,4 +1,5 @@
-const axios = require("axios")
+// const axios = require("axios")
+import axios from "axios";
 const BASE_URL = "https://core.nebbix.com/userApi"
 
 export class Nebbix {
@@ -9,6 +10,39 @@ export class Nebbix {
         this.userAccessToken = userAccessToken;
         this.clientId = clientId;
     }
+    
+    /**
+     * createWalletAddress
+     */
+
+    public async createWalletAddress (body) {
+        return this.sendRequest("/wallet/create_address", {...body});
+    }
+
+    /**
+     * createWallet
+     */
+
+    public async createWallet (body) {
+        return this.sendRequest("/wallet/create", {...body});
+    }
+
+    
+    /**
+     * getWallets
+     */
+
+     public async getWallets (currency) {
+        return this.sendRequest("/wallet?currency="+currency, {}, "GET");
+    }
+
+    /**
+     * sendCrypto
+     */
+     public async sendCrypto(body) {
+        return await this.sendRequest("/wallet/send", {...body});
+    }
+
     /**
      * initializeTransactions
      */
@@ -149,29 +183,32 @@ export class Nebbix {
      
     private async sendRequest (url, body, method = "POST") {
         if (method == "GET") {
-            return await axios.get(`${BASE_URL}${url}`, {
+            const { data } = await axios.get(`${BASE_URL}${url}`, {
                 headers: {
                         'Content-Type': 'application/json',
                         'user-access-token': this.userAccessToken,
                         'client-id': this.clientId
                     }
-            }).then(e => e)
+            }).then(e => e?.data)
                 .catch(e => {
                     const {response} = e;
                     throw response.data;
                 })
+
+            return data;
         }
-        return await axios.post(`${BASE_URL}${url}`, {...body}, {
+        const { data } = await axios.post(`${BASE_URL}${url}`, {...body}, {
                 headers: {
                         'Content-Type': 'application/json',
                         'user-access-token': this.userAccessToken,
                         'client-id': this.clientId
                     }
-            }).then(e => e)
+            }).then(e => e?.data)
                 .catch(e => {
                     const {response} = e;
                     throw response.data;
                 })
+            return data;
     }
 
 }

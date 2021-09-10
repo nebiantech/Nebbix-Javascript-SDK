@@ -4,7 +4,7 @@
 ```
 nebbix.initializeTransactions({
     amount: "0.0001",
-    wallet_id: "2",
+    "currency": "btc",
     "custom_data": {
         "custom_keys": "custom_value"
     }
@@ -89,12 +89,13 @@ nebbix.initializeTransactions({
 
 
 ### 3
-###    Create Btc Wallet
+###    Create Wallet
 
 
 ```
-    nebbix.createBtcwallet({
-        "name": "Wallet Name"
+    nebbix.createWallet({
+        "name": "Client Wallet new",
+        "currency": "BTC"
     }).then(e => console.log(e.data)).catch(e => {
         console.log(e)
     });
@@ -122,11 +123,11 @@ nebbix.initializeTransactions({
 
 
 ### 4
-### createBtcwalletAddress
+### createWalletAddress
 
 ```
-    nebbix.createBtcwalletAddress({
-        "wallet_id": "12"
+    nebbix.createWalletAddress({
+        "currency": "BTC"
     }).then(e => console.log(e.data)).catch(e => {
         console.log(e)
     });
@@ -156,68 +157,30 @@ nebbix.initializeTransactions({
 
 
 ### 5
-### getBtcWallet
+### getWallets
 
 ```
-    nebbix.getBtcWallet("12").then(e => console.log(e.data)).catch(e => {
+    nebbix.getWallets("btc").then(e => console.log(e.data)).catch(e => {
         console.log(e)
     });
 
 ```
-
 
 ### 6
-### getBtcWallets
+### sendCrypto
 
 ```
-    nebbix.getBtcWallets().then(e => console.log(e.data)).catch(e => {
-        console.log(e.data)
-    });
-```
-
-
-### 7
-### createLtcwallet
-
-```
-    nebbix.createLtcwallet({}).then(e => console.log(e.data)).catch(e => {
-        console.log(e)
-    });
-
-```
-
-
-### 8
-### createLtcwalletAddress
-
-```
-    nebbix.createLtcwalletAddress({}).then(e => console.log(e.data)).catch(e => {
-        console.log(e)
-    });
-```
-
-### 9
-### getLtcWallet`
-
-```
-    nebbix.getLtcWallet("wallet_id").then(e => console.log(e.data)).catch(e => {
-        console.log(e)
-    });
-
-```
-### 10
-### sendBtc
-
-```
-    nebbix.sendBtc({
+    nebbix.sendCrypto({
         "address": "tb1qpq7ypa334wj07f92x6avv0zt7m2tjawgh5wk8f",
-        "wallet_id": "1",
-        "amount": "0.0001",
+        "currency": "BTC",
+        "amount": "0.001",
         "set_fee": "0.00001000",
         "memo": "Any text here (optional)"
-    }).then(e => console.log(e.data)).catch(e => {
+    })
+    .then(e => {
         console.log(e)
-    });
+    })
+    .catch(er => console.error(er))
 ```
 
 // Example response
@@ -227,57 +190,6 @@ nebbix.initializeTransactions({
     "success": true,
     "data": "bb5bc545a7cd8ea4e487c6833dbc75ef80a9c67b04f09f3b8544e8cc190f5eb0",
     "message": "Btc sent successfully.",
-    "ref": "8bVE65teUO29fmZ"
-}
-```
-
-### 11
-### sendLtc
-
-```
-    nebbix.sendLtc({
-        "address": "tb1qpq7ypa334wj07f92x6avv0zt7m2tjawgh5wk8f",
-        "wallet_id": "1",
-        "amount": "0.0001",
-        "set_fee": "0.00001000",
-        "memo": "Any text here (optional)"
-    }).then(e => console.log(e.data)).catch(e => {
-        console.log(e)
-    });
-```
-
-// Example response
-
-```
-{
-    "success": true,
-    "data": "bb5bc545a7cd8ea4e487c6833dbc75ef80a9c67b04f09f3b8544e8cc190f5eb0",
-    "message": "Ltc sent successfully.",
-    "ref": "8bVE65teUO29fmZ"
-}
-```
-### 12
-### sendDoge
-
-```
-    nebbix.sendDoge({
-        "address": "tb1qpq7ypa334wj07f92x6avv0zt7m2tjawgh5wk8f",
-        "wallet_id": "1",
-        "amount": "0.0001",
-        "set_fee": "0.00001000",
-        "memo": "Any text here (optional)"
-    }).then(e => console.log(e.data)).catch(e => {
-        console.log(e)
-    });
-```
-
-// Example response
-
-```
-{
-    "success": true,
-    "data": "bb5bc545a7cd8ea4e487c6833dbc75ef80a9c67b04f09f3b8544e8cc190f5eb0",
-    "message": "Doge sent successfully.",
     "ref": "8bVE65teUO29fmZ"
 }
 ```
