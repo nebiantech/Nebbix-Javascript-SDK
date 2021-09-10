@@ -1,0 +1,25 @@
+{
+  "name": "nebbix-js-sdk",
+  "version": "1.0.1",
+  "description": "Nebbix Nodejs SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebiantech/Nebbix-Javascript-SDK.git"
+  },
+  "keywords": [
+    "nebbix"
+  ],
+  "author": "mrbarnk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nebiantech/Nebbix-Javascript-SDK/issues"
+  },
+  "homepage": "https://github.com/nebiantech/Nebbix-Javascript-SDK#readme",
+  "dependencies": {
+    "nebbix-js-sdk": "^1.0.1"
+  }
+}

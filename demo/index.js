@@ -1,4 +1,5 @@
-const Nebbix = require("../dist/Nebbix");
+const { Nebbix } = require("../dist/");
+
 let nebbix = new Nebbix("clientId", "clientToken");
 
 

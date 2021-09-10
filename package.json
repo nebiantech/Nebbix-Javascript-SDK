@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon demo/index.js",
     "start": "nodemon index.ts",
-    "build": "tsc",
+    "build": "rm -r ./dist && tsc",
     "watch": "npm run build && tsc-watch ./src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\" --onFailure \"echo Error while compiling\" --compiler typescript/bin/tsc"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
   "dependencies": {
     "awesome-typescript-loader": "^5.2.1",
     "axios": "^0.21.1",
+    "nebbix-js-sdk": "^1.0.1",
     "source-map-loader": "^2.0.1",
     "ts-node": "^10.2.1"
   },

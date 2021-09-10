@@ -1,3 +1,10 @@
+```
+const { Nebbix } = require("nebbix-js-sdk");
+
+let nebbix = new Nebbix("clientId", "clientToken");
+
+```
+
 ### 1 
 ### Initialize a payment
 
