@@ -1,4 +1,4 @@
-const { Nebbix } = require("../dist/");
+const { Nebbix } = require("nebbix-js-sdk");
 
 let nebbix = new Nebbix("clientId", "clientToken");
 
@@ -32,6 +32,7 @@ let nebbix = new Nebbix("clientId", "clientToken");
     // .then(e => {
     //     console.log(e)
     // })
+    // .catch(console.log)
 
     // nebbix.sendCrypto({
     //     "address": "tb1qpq7ypa334wj07f92x6avv0zt7m2tjawgh5wk8f",

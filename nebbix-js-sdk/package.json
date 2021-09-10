@@ -1,6 +1,6 @@
 {
   "name": "nebbix-js-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Nebbix Nodejs SDK",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/nebiantech/Nebbix-Javascript-SDK#readme",
   "dependencies": {
-    "nebbix-js-sdk": "^1.0.1"
+    "nebbix-js-sdk": "^1.0.2"
   }
 }
